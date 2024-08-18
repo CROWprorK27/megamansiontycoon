@@ -14,14 +14,15 @@ local Converted = {
 	["_Keybind1"] = Instance.new("TextLabel");
 	["_Cheapest"] = Instance.new("TextButton");
 	["_Keybind2"] = Instance.new("TextLabel");
+	["_Player"] = Instance.new("TextButton");
+	["_Players"] = Instance.new("Frame");
+	["_Santos_M27"] = Instance.new("TextButton");
+	["_UIListLayout"] = Instance.new("UIListLayout");
 	["_CloseButton"] = Instance.new("TextButton");
+	["_Santos_M271"] = Instance.new("TextButton");
 }
 
 -- Properties:
-
-if game:GetService("CoreGui"):FindFirstChild("MegaMansionTycoon") then
-	game:GetService("CoreGui").MegaMansionTycoon:Destroy()
-end
 
 Converted["_MegaMansionTycoon"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Converted["_MegaMansionTycoon"].Name = "MegaMansionTycoon"
@@ -150,6 +151,46 @@ Converted["_Keybind2"].Size = UDim2.new(1, 0, 1, 0)
 Converted["_Keybind2"].Name = "Keybind"
 Converted["_Keybind2"].Parent = Converted["_Cheapest"]
 
+Converted["_Player"].Font = Enum.Font.GothamBold
+Converted["_Player"].Text = "Player"
+Converted["_Player"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Player"].TextScaled = true
+Converted["_Player"].TextSize = 14
+Converted["_Player"].TextWrapped = true
+Converted["_Player"].BackgroundColor3 = Color3.fromRGB(75.00000312924385, 75.00000312924385, 75.00000312924385)
+Converted["_Player"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Player"].BorderSizePixel = 0
+Converted["_Player"].Position = UDim2.new(0, 0, 3, 0)
+Converted["_Player"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_Player"].Name = "Player"
+Converted["_Player"].Parent = Converted["_TeleportToButton"]
+
+Converted["_Players"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Players"].BackgroundTransparency = 1
+Converted["_Players"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Players"].BorderSizePixel = 0
+Converted["_Players"].Position = UDim2.new(1, 0, 0, 0)
+Converted["_Players"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_Players"].Visible = false
+Converted["_Players"].Name = "Players"
+Converted["_Players"].Parent = Converted["_Player"]
+
+Converted["_Santos_M27"].Font = Enum.Font.GothamBold
+Converted["_Santos_M27"].Text = "Santos_M27"
+Converted["_Santos_M27"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Santos_M27"].TextScaled = true
+Converted["_Santos_M27"].TextSize = 14
+Converted["_Santos_M27"].TextWrapped = true
+Converted["_Santos_M27"].BackgroundColor3 = Color3.fromRGB(75.00000312924385, 75.00000312924385, 75.00000312924385)
+Converted["_Santos_M27"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Santos_M27"].BorderSizePixel = 0
+Converted["_Santos_M27"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_Santos_M27"].Name = "Santos_M27"
+Converted["_Santos_M27"].Parent = Converted["_Players"]
+
+Converted["_UIListLayout"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout"].Parent = Converted["_Players"]
+
 Converted["_CloseButton"].Font = Enum.Font.GothamBold
 Converted["_CloseButton"].Text = "X"
 Converted["_CloseButton"].TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -165,6 +206,20 @@ Converted["_CloseButton"].Size = UDim2.new(0.100000001, 0, 0.150000006, 0)
 Converted["_CloseButton"].Name = "CloseButton"
 Converted["_CloseButton"].Parent = Converted["_Main"]
 
+Converted["_Santos_M271"].Font = Enum.Font.GothamBold
+Converted["_Santos_M271"].Text = "Santos_M27"
+Converted["_Santos_M271"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Santos_M271"].TextScaled = true
+Converted["_Santos_M271"].TextSize = 14
+Converted["_Santos_M271"].TextWrapped = true
+Converted["_Santos_M271"].BackgroundColor3 = Color3.fromRGB(70.00000342726707, 70.00000342726707, 70.00000342726707)
+Converted["_Santos_M271"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Santos_M271"].BorderSizePixel = 0
+Converted["_Santos_M271"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_Santos_M271"].Visible = false
+Converted["_Santos_M271"].Name = "Santos_M27"
+Converted["_Santos_M271"].Parent = Converted["_Main"]
+
 -- Fake Module Scripts:
 
 local fake_module_scripts = {}
@@ -172,7 +227,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function SUUS_fake_script() -- Fake Script: StarterGui.MegaMansionTycoon.Main.LocalScript
+local function XQQXMQ_fake_script() -- Fake Script: StarterGui.MegaMansionTycoon.Main.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Main"]
@@ -190,6 +245,11 @@ local function SUUS_fake_script() -- Fake Script: StarterGui.MegaMansionTycoon.M
 	local plr = game.Players.LocalPlayer
 	local Debounce = false
 	
+	for _,Gui in script.Parent.Parent.Parent:GetChildren() do
+		if Gui == script.Parent.Parent or Gui.Name ~= script.Parent.Parent.Name then continue end
+		Gui:Destroy()
+	end
+	
 	script.Parent.Draggable = true
 	
 	function FindNearestButton(HRP, Tycoon, Type)
@@ -199,7 +259,7 @@ local function SUUS_fake_script() -- Fake Script: StarterGui.MegaMansionTycoon.M
 	
 		for _,Level in Tycoon.Buttons:GetChildren() do
 			for _,Button in Level:GetChildren() do
-				if not Button:FindFirstChild("extra") or Button.extra.Transparency == 1 then continue end
+				if not Button:FindFirstChild("extra") or math.round(Button.extra.Transparency * 100) / 100 ~= 0 or math.round(Button.extra.Size.Y * 100) / 100 ~= 0.95 then continue end
 				local Price = Button.BillboardGui.Frame.ImageLabel.PriceText.Text
 				Price = string.sub(Price, 2)
 				Price = string.gsub(Price, ",", "")
@@ -216,7 +276,7 @@ local function SUUS_fake_script() -- Fake Script: StarterGui.MegaMansionTycoon.M
 		end
 	
 		if ButtonChosen then
-			ButtonChosen.extra.Transparency = 1
+			--ButtonChosen.extra.Transparency = 1
 		end
 	
 		return ButtonChosen
@@ -305,9 +365,42 @@ local function SUUS_fake_script() -- Fake Script: StarterGui.MegaMansionTycoon.M
 		KeyFunction(Enum.KeyCode.X)
 	end)
 	
+	script.Parent:WaitForChild("TeleportToButton"):WaitForChild("Player").MouseButton1Click:Connect(function()
+		script.Parent.TeleportToButton.Player.Players.Visible = not script.Parent.TeleportToButton.Player.Players.Visible
+	
+		if script.Parent.TeleportToButton.Player.Players.Visible then
+			for _,Player in script.Parent.TeleportToButton.Player.Players:GetChildren() do
+				if Player:IsA("TextButton") then
+					Player:Destroy()
+				end
+			end
+	
+			for _,Player in game.Players:GetPlayers() do
+				local Button = script.Parent.Santos_M27:Clone()
+				Button.Name = Player.Name
+				Button.Text = Player.DisplayName
+				Button.Parent = script.Parent.TeleportToButton.Player.Players
+				Button.Visible = true
+	
+				Button.MouseButton1Click:Connect(function()
+					if not Player then Button:Destroy() return end
+					if not Player.Character then return end
+					local Character = plr.Character
+	
+					if not Character then return end
+					local PlayerCharacter = Player.Character
+	
+					if PlayerCharacter then
+						Character:SetPrimaryPartCFrame(Player.Character:GetPivot())
+					end
+				end)
+			end
+		end
+	end)
+	
 	script.Parent:WaitForChild("CloseButton").MouseButton1Click:Connect(function()
 		script.Parent.Parent:Destroy()
 	end)
 end
 
-coroutine.wrap(SUUS_fake_script)()
+coroutine.wrap(XQQXMQ_fake_script)()
