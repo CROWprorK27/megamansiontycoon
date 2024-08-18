@@ -1,12 +1,20 @@
--- Generated using RoadToGlory's Converter v1.1 (RoadToGlory#9879)
+-- Made by SantosM (@Santos_M27)
 
 -- Instances:
 
 local Converted = {
 	["_MegaMansionTycoon"] = Instance.new("ScreenGui");
-	["_Frame"] = Instance.new("Frame");
-	["_TextLabel"] = Instance.new("TextLabel");
-	["_TextButton"] = Instance.new("TextButton");
+	["_Main"] = Instance.new("Frame");
+	["_Title"] = Instance.new("TextLabel");
+	["_TeleportToMailbox"] = Instance.new("TextButton");
+	["_Keybind"] = Instance.new("TextLabel");
+	["_LocalScript"] = Instance.new("LocalScript");
+	["_TeleportToButton"] = Instance.new("TextButton");
+	["_Nearest"] = Instance.new("TextButton");
+	["_Keybind1"] = Instance.new("TextLabel");
+	["_Cheapest"] = Instance.new("TextButton");
+	["_Keybind2"] = Instance.new("TextLabel");
+	["_CloseButton"] = Instance.new("TextButton");
 }
 
 -- Properties:
@@ -15,35 +23,234 @@ Converted["_MegaMansionTycoon"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Converted["_MegaMansionTycoon"].Name = "MegaMansionTycoon"
 Converted["_MegaMansionTycoon"].Parent = game:GetService("CoreGui")
 
-Converted["_Frame"].BackgroundColor3 = Color3.fromRGB(50.000000819563866, 50.000000819563866, 50.000000819563866)
-Converted["_Frame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Frame"].BorderSizePixel = 0
-Converted["_Frame"].Position = UDim2.new(0.385370195, 0, 0.176600441, 0)
-Converted["_Frame"].Size = UDim2.new(0, 339, 0, 191)
-Converted["_Frame"].Parent = Converted["_MegaMansionTycoon"]
+Converted["_Main"].BackgroundColor3 = Color3.fromRGB(50.000000819563866, 50.000000819563866, 50.000000819563866)
+Converted["_Main"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Main"].BorderSizePixel = 0
+Converted["_Main"].Position = UDim2.new(0, 391, 0, 131)
+Converted["_Main"].Size = UDim2.new(0, 339, 0, 191)
+Converted["_Main"].Name = "Main"
+Converted["_Main"].Parent = Converted["_MegaMansionTycoon"]
 
-Converted["_TextLabel"].Font = Enum.Font.GothamBold
-Converted["_TextLabel"].Text = "Mega Mansion Tycoon UI by Santos_M27"
-Converted["_TextLabel"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_TextLabel"].TextSize = 14
-Converted["_TextLabel"].AnchorPoint = Vector2.new(0.5, 0)
-Converted["_TextLabel"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_TextLabel"].BackgroundTransparency = 1
-Converted["_TextLabel"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_TextLabel"].BorderSizePixel = 0
-Converted["_TextLabel"].Position = UDim2.new(0.5, 0, 0, 0)
-Converted["_TextLabel"].Size = UDim2.new(1, 0, 0.150000006, 0)
-Converted["_TextLabel"].Parent = Converted["_Frame"]
+Converted["_Title"].Font = Enum.Font.GothamBold
+Converted["_Title"].Text = "Mega Mansion Tycoon UI by Santos_M27"
+Converted["_Title"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Title"].TextSize = 14
+Converted["_Title"].AnchorPoint = Vector2.new(0.5, 0)
+Converted["_Title"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Title"].BackgroundTransparency = 1
+Converted["_Title"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Title"].BorderSizePixel = 0
+Converted["_Title"].Position = UDim2.new(0.449999988, 0, 0, 0)
+Converted["_Title"].Size = UDim2.new(0.899999976, 0, 0.150000006, 0)
+Converted["_Title"].Name = "Title"
+Converted["_Title"].Parent = Converted["_Main"]
 
-Converted["_TextButton"].Font = Enum.Font.Gotham
-Converted["_TextButton"].Text = "Teleport to mailbox"
-Converted["_TextButton"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_TextButton"].TextScaled = true
-Converted["_TextButton"].TextSize = 14
-Converted["_TextButton"].TextWrapped = true
-Converted["_TextButton"].BackgroundColor3 = Color3.fromRGB(100.00000163912773, 100.00000163912773, 100.00000163912773)
-Converted["_TextButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_TextButton"].BorderSizePixel = 0
-Converted["_TextButton"].Position = UDim2.new(0, 0, 0.150000006, 0)
-Converted["_TextButton"].Size = UDim2.new(0.5, 0, 0.100000001, 0)
-Converted["_TextButton"].Parent = Converted["_Frame"]
+Converted["_TeleportToMailbox"].Font = Enum.Font.GothamBold
+Converted["_TeleportToMailbox"].Text = "Teleport to mailbox"
+Converted["_TeleportToMailbox"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TeleportToMailbox"].TextScaled = true
+Converted["_TeleportToMailbox"].TextSize = 14
+Converted["_TeleportToMailbox"].TextWrapped = true
+Converted["_TeleportToMailbox"].BackgroundColor3 = Color3.fromRGB(100.00000163912773, 100.00000163912773, 100.00000163912773)
+Converted["_TeleportToMailbox"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TeleportToMailbox"].BorderSizePixel = 0
+Converted["_TeleportToMailbox"].Position = UDim2.new(0, 0, 0.150000006, 0)
+Converted["_TeleportToMailbox"].Size = UDim2.new(0.5, 0, 0.100000001, 0)
+Converted["_TeleportToMailbox"].Name = "TeleportToMailbox"
+Converted["_TeleportToMailbox"].Parent = Converted["_Main"]
+
+Converted["_Keybind"].Font = Enum.Font.Gotham
+Converted["_Keybind"].Text = "Q"
+Converted["_Keybind"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Keybind"].TextScaled = true
+Converted["_Keybind"].TextSize = 14
+Converted["_Keybind"].TextWrapped = true
+Converted["_Keybind"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Keybind"].BackgroundTransparency = 1
+Converted["_Keybind"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Keybind"].BorderSizePixel = 0
+Converted["_Keybind"].Position = UDim2.new(1, 0, 0, 0)
+Converted["_Keybind"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_Keybind"].Name = "Keybind"
+Converted["_Keybind"].Parent = Converted["_TeleportToMailbox"]
+
+Converted["_TeleportToButton"].Font = Enum.Font.GothamBold
+Converted["_TeleportToButton"].Text = "Teleport to:"
+Converted["_TeleportToButton"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TeleportToButton"].TextScaled = true
+Converted["_TeleportToButton"].TextSize = 14
+Converted["_TeleportToButton"].TextWrapped = true
+Converted["_TeleportToButton"].BackgroundColor3 = Color3.fromRGB(100.00000163912773, 100.00000163912773, 100.00000163912773)
+Converted["_TeleportToButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TeleportToButton"].BorderSizePixel = 0
+Converted["_TeleportToButton"].Position = UDim2.new(0, 0, 0.300000012, 0)
+Converted["_TeleportToButton"].Size = UDim2.new(0.5, 0, 0.100000001, 0)
+Converted["_TeleportToButton"].Name = "TeleportToButton"
+Converted["_TeleportToButton"].Parent = Converted["_Main"]
+
+Converted["_Nearest"].Font = Enum.Font.GothamBold
+Converted["_Nearest"].Text = "Nearest Button"
+Converted["_Nearest"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Nearest"].TextScaled = true
+Converted["_Nearest"].TextSize = 14
+Converted["_Nearest"].TextWrapped = true
+Converted["_Nearest"].BackgroundColor3 = Color3.fromRGB(75.00000312924385, 75.00000312924385, 75.00000312924385)
+Converted["_Nearest"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Nearest"].BorderSizePixel = 0
+Converted["_Nearest"].Position = UDim2.new(0, 0, 1, 0)
+Converted["_Nearest"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_Nearest"].Name = "Nearest"
+Converted["_Nearest"].Parent = Converted["_TeleportToButton"]
+
+Converted["_Keybind1"].Font = Enum.Font.Gotham
+Converted["_Keybind1"].Text = "Z"
+Converted["_Keybind1"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Keybind1"].TextScaled = true
+Converted["_Keybind1"].TextSize = 14
+Converted["_Keybind1"].TextWrapped = true
+Converted["_Keybind1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Keybind1"].BackgroundTransparency = 1
+Converted["_Keybind1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Keybind1"].BorderSizePixel = 0
+Converted["_Keybind1"].Position = UDim2.new(1, 0, 0, 0)
+Converted["_Keybind1"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_Keybind1"].Name = "Keybind"
+Converted["_Keybind1"].Parent = Converted["_Nearest"]
+
+Converted["_Cheapest"].Font = Enum.Font.GothamBold
+Converted["_Cheapest"].Text = "Cheapest Button"
+Converted["_Cheapest"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Cheapest"].TextScaled = true
+Converted["_Cheapest"].TextSize = 14
+Converted["_Cheapest"].TextWrapped = true
+Converted["_Cheapest"].BackgroundColor3 = Color3.fromRGB(75.00000312924385, 75.00000312924385, 75.00000312924385)
+Converted["_Cheapest"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Cheapest"].BorderSizePixel = 0
+Converted["_Cheapest"].Position = UDim2.new(0, 0, 2, 0)
+Converted["_Cheapest"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_Cheapest"].Name = "Cheapest"
+Converted["_Cheapest"].Parent = Converted["_TeleportToButton"]
+
+Converted["_Keybind2"].Font = Enum.Font.Gotham
+Converted["_Keybind2"].Text = "X"
+Converted["_Keybind2"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Keybind2"].TextScaled = true
+Converted["_Keybind2"].TextSize = 14
+Converted["_Keybind2"].TextWrapped = true
+Converted["_Keybind2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Keybind2"].BackgroundTransparency = 1
+Converted["_Keybind2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Keybind2"].BorderSizePixel = 0
+Converted["_Keybind2"].Position = UDim2.new(1, 0, 0, 0)
+Converted["_Keybind2"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_Keybind2"].Name = "Keybind"
+Converted["_Keybind2"].Parent = Converted["_Cheapest"]
+
+Converted["_CloseButton"].Font = Enum.Font.GothamBold
+Converted["_CloseButton"].Text = "X"
+Converted["_CloseButton"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_CloseButton"].TextScaled = true
+Converted["_CloseButton"].TextSize = 14
+Converted["_CloseButton"].TextWrapped = true
+Converted["_CloseButton"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_CloseButton"].BackgroundTransparency = 1
+Converted["_CloseButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_CloseButton"].BorderSizePixel = 0
+Converted["_CloseButton"].Position = UDim2.new(0.899999976, 0, 0, 0)
+Converted["_CloseButton"].Size = UDim2.new(0.100000001, 0, 0.150000006, 0)
+Converted["_CloseButton"].Name = "CloseButton"
+Converted["_CloseButton"].Parent = Converted["_Main"]
+
+-- Fake Module Scripts:
+
+local fake_module_scripts = {}
+
+
+-- Fake Local Scripts:
+
+local function AODAGZB_fake_script() -- Fake Script: StarterGui.MegaMansionTycoon.Main.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Main"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local UIS = game:GetService("UserInputService")
+	local Tycoons = game.Workspace["Zednov's Tycoon Kit"].Tycoons
+	local plr = game.Players.LocalPlayer
+	local Debounce = false
+	
+	function FindNearestButton(HRP, Tycoon, Type)
+		local ButtonChosen
+		local ButtonDistance = math.huge
+		local ButtonPrice = math.huge
+	
+		for _,Level in Tycoon.Buttons:GetChildren() do
+			for _,Button in Level:GetChildren() do
+				if not Button:FindFirstChild("extra") or Button.extra.Transparency == 1 then continue end
+				local Price = Button.BillboardGui.Frame.ImageLabel.PriceText.Text
+				Price = string.sub(Price, 2)
+				Price = string.gsub(Price, ",", "")
+				Price = Price
+				Price = tonumber(Price)
+	
+				if Type == "Nearest" and (Button.extra.Position - HRP.Position).Magnitude > ButtonDistance then continue end
+				if Type == "Cheapest" and Price > ButtonPrice then continue end
+				if plr.leaderstats.Cash.Value < Price then continue end
+				ButtonChosen = Button
+				ButtonDistance = (Button.extra.Position - HRP.Position).Magnitude
+				ButtonPrice = Price
+			end
+		end
+	
+		if ButtonChosen then
+			ButtonChosen.extra.Transparency = 1
+		end
+	
+		return ButtonChosen
+	end
+	
+	function GetCurrentTycoon()
+		for _,Tycoon in Tycoons:GetChildren() do
+			if not Tycoon:FindFirstChild("Owner") or not Tycoon.Owner.Value or Tycoon.Owner.Value.Name ~= plr.Name then continue end
+			return Tycoon
+		end
+	end
+	
+	UIS.InputBegan:Connect(function(Input, IsTyping)
+		if IsTyping or Debounce or not script.Parent.Visible then return end
+		Debounce = true
+	
+		local Character = plr.Character
+	
+		if Input.KeyCode == Enum.KeyCode.Q then
+			local LastPosition = Character:GetPrimaryPartCFrame()
+	
+			Character:SetPrimaryPartCFrame(CFrame.new(GetCurrentTycoon().Essentials.Giver.Position))
+	
+			wait(0.01)
+	
+			Character:SetPrimaryPartCFrame(LastPosition)
+		elseif Input.KeyCode == Enum.KeyCode.Z or Input.KeyCode == Enum.KeyCode.X then
+			local Button = FindNearestButton(Character.HumanoidRootPart, GetCurrentTycoon(), Input.KeyCode == Enum.KeyCode.Z and "Nearest" or "Cheapest")
+	
+			if Button then
+				Character:SetPrimaryPartCFrame(Button.extra.CFrame + Vector3.new(0, 2, 0))
+			end
+		end
+	
+		Debounce = false
+	end)
+	
+	script.Parent:WaitForChild("CloseButton").MouseButton1Click:Connect(function()
+		script.Parent.Parent:Destroy()
+	end)
+end
+
+coroutine.wrap(AODAGZB_fake_script)()
