@@ -19,6 +19,10 @@ local Converted = {
 
 -- Properties:
 
+if game:GetService("CoreGui"):FindFirstChild("MegaMansionTycoon") then
+	game:GetService("CoreGui").MegaMansionTycoon:Destroy()
+end
+
 Converted["_MegaMansionTycoon"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Converted["_MegaMansionTycoon"].Name = "MegaMansionTycoon"
 Converted["_MegaMansionTycoon"].Parent = game:GetService("CoreGui")
