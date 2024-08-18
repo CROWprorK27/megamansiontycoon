@@ -19,6 +19,10 @@ local Converted = {
 
 -- Properties:
 
+if game:GetService("CoreGui"):FindFirstChild("MegaMansionTycoon") then
+	game:GetService("CoreGui").MegaMansionTycoon:Destroy()
+end
+
 Converted["_MegaMansionTycoon"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Converted["_MegaMansionTycoon"].Name = "MegaMansionTycoon"
 Converted["_MegaMansionTycoon"].Parent = game:GetService("CoreGui")
@@ -29,6 +33,7 @@ Converted["_Main"].BorderSizePixel = 0
 Converted["_Main"].Position = UDim2.new(0, 391, 0, 131)
 Converted["_Main"].Size = UDim2.new(0, 339, 0, 191)
 Converted["_Main"].Name = "Main"
+Converted["_Main"].Draggable = true
 Converted["_Main"].Parent = Converted["_MegaMansionTycoon"]
 
 Converted["_Title"].Font = Enum.Font.GothamBold
