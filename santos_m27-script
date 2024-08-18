@@ -1,0 +1,49 @@
+-- Generated using RoadToGlory's Converter v1.1 (RoadToGlory#9879)
+
+-- Instances:
+
+local Converted = {
+	["_MegaMansionTycoon"] = Instance.new("ScreenGui");
+	["_Frame"] = Instance.new("Frame");
+	["_TextLabel"] = Instance.new("TextLabel");
+	["_TextButton"] = Instance.new("TextButton");
+}
+
+-- Properties:
+
+Converted["_MegaMansionTycoon"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Converted["_MegaMansionTycoon"].Name = "MegaMansionTycoon"
+Converted["_MegaMansionTycoon"].Parent = game:GetService("CoreGui")
+
+Converted["_Frame"].BackgroundColor3 = Color3.fromRGB(50.000000819563866, 50.000000819563866, 50.000000819563866)
+Converted["_Frame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Frame"].BorderSizePixel = 0
+Converted["_Frame"].Position = UDim2.new(0.385370195, 0, 0.176600441, 0)
+Converted["_Frame"].Size = UDim2.new(0, 339, 0, 191)
+Converted["_Frame"].Parent = Converted["_MegaMansionTycoon"]
+
+Converted["_TextLabel"].Font = Enum.Font.GothamBold
+Converted["_TextLabel"].Text = "Mega Mansion Tycoon UI by Santos_M27"
+Converted["_TextLabel"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel"].TextSize = 14
+Converted["_TextLabel"].AnchorPoint = Vector2.new(0.5, 0)
+Converted["_TextLabel"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel"].BackgroundTransparency = 1
+Converted["_TextLabel"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel"].BorderSizePixel = 0
+Converted["_TextLabel"].Position = UDim2.new(0.5, 0, 0, 0)
+Converted["_TextLabel"].Size = UDim2.new(1, 0, 0.150000006, 0)
+Converted["_TextLabel"].Parent = Converted["_Frame"]
+
+Converted["_TextButton"].Font = Enum.Font.Gotham
+Converted["_TextButton"].Text = "Teleport to mailbox"
+Converted["_TextButton"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextButton"].TextScaled = true
+Converted["_TextButton"].TextSize = 14
+Converted["_TextButton"].TextWrapped = true
+Converted["_TextButton"].BackgroundColor3 = Color3.fromRGB(100.00000163912773, 100.00000163912773, 100.00000163912773)
+Converted["_TextButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextButton"].BorderSizePixel = 0
+Converted["_TextButton"].Position = UDim2.new(0, 0, 0.150000006, 0)
+Converted["_TextButton"].Size = UDim2.new(0.5, 0, 0.100000001, 0)
+Converted["_TextButton"].Parent = Converted["_Frame"]
