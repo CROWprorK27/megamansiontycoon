@@ -1,4 +1,4 @@
--- Made by SantosM (@Santos_M27)
+-- Made by Santos_M27
 
 -- Instances:
 
@@ -19,10 +19,6 @@ local Converted = {
 
 -- Properties:
 
-if game:GetService("CoreGui"):FindFirstChild("MegaMansionTycoon") then
-	game:GetService("CoreGui").MegaMansionTycoon:Destroy()
-end
-
 Converted["_MegaMansionTycoon"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Converted["_MegaMansionTycoon"].Name = "MegaMansionTycoon"
 Converted["_MegaMansionTycoon"].Parent = game:GetService("CoreGui")
@@ -33,7 +29,6 @@ Converted["_Main"].BorderSizePixel = 0
 Converted["_Main"].Position = UDim2.new(0, 391, 0, 131)
 Converted["_Main"].Size = UDim2.new(0, 339, 0, 191)
 Converted["_Main"].Name = "Main"
-Converted["_Main"].Draggable = true
 Converted["_Main"].Parent = Converted["_MegaMansionTycoon"]
 
 Converted["_Title"].Font = Enum.Font.GothamBold
@@ -173,7 +168,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function AODAGZB_fake_script() -- Fake Script: StarterGui.MegaMansionTycoon.Main.LocalScript
+local function EHGOYII_fake_script() -- Fake Script: StarterGui.MegaMansionTycoon.Main.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Main"]
@@ -190,6 +185,8 @@ local function AODAGZB_fake_script() -- Fake Script: StarterGui.MegaMansionTycoo
 	local Tycoons = game.Workspace["Zednov's Tycoon Kit"].Tycoons
 	local plr = game.Players.LocalPlayer
 	local Debounce = false
+	
+	script.Parent.Draggable = true
 	
 	function FindNearestButton(HRP, Tycoon, Type)
 		local ButtonChosen
@@ -228,13 +225,13 @@ local function AODAGZB_fake_script() -- Fake Script: StarterGui.MegaMansionTycoo
 		end
 	end
 	
-	UIS.InputBegan:Connect(function(Input, IsTyping)
-		if IsTyping or Debounce or not script.Parent.Visible then return end
+	function KeyFunction(Input)
+		if Debounce or not script.Parent.Visible then return end
 		Debounce = true
 	
 		local Character = plr.Character
 	
-		if Input.KeyCode == Enum.KeyCode.Q then
+		if Input == Enum.KeyCode.Q then
 			local LastPosition = Character:GetPrimaryPartCFrame()
 	
 			Character:SetPrimaryPartCFrame(CFrame.new(GetCurrentTycoon().Essentials.Giver.Position))
@@ -242,8 +239,8 @@ local function AODAGZB_fake_script() -- Fake Script: StarterGui.MegaMansionTycoo
 			wait(0.01)
 	
 			Character:SetPrimaryPartCFrame(LastPosition)
-		elseif Input.KeyCode == Enum.KeyCode.Z or Input.KeyCode == Enum.KeyCode.X then
-			local Button = FindNearestButton(Character.HumanoidRootPart, GetCurrentTycoon(), Input.KeyCode == Enum.KeyCode.Z and "Nearest" or "Cheapest")
+		elseif Input == Enum.KeyCode.Z or Input == Enum.KeyCode.X then
+			local Button = FindNearestButton(Character.HumanoidRootPart, GetCurrentTycoon(), Input == Enum.KeyCode.Z and "Nearest" or "Cheapest")
 	
 			if Button then
 				Character:SetPrimaryPartCFrame(Button.extra.CFrame + Vector3.new(0, 2, 0))
@@ -251,6 +248,23 @@ local function AODAGZB_fake_script() -- Fake Script: StarterGui.MegaMansionTycoo
 		end
 	
 		Debounce = false
+	end
+	
+	UIS.InputBegan:Connect(function(Input, IsTyping)
+		if IsTyping then return end
+		KeyFunction(Input.KeyCode)
+	end)
+	
+	script.Parent:WaitForChild("TeleportToMailbox").MouseButton1Click:Connect(function()
+		KeyFunction(Enum.KeyCode.Q)
+	end)
+	
+	script.Parent:WaitForChild("TeleportToButton"):WaitForChild("Nearest").MouseButton1Click:Connect(function()
+		KeyFunction(Enum.KeyCode.Z)
+	end)
+	
+	script.Parent:WaitForChild("TeleportToButton"):WaitForChild("Cheapest").MouseButton1Click:Connect(function()
+		KeyFunction(Enum.KeyCode.X)
 	end)
 	
 	script.Parent:WaitForChild("CloseButton").MouseButton1Click:Connect(function()
@@ -258,4 +272,4 @@ local function AODAGZB_fake_script() -- Fake Script: StarterGui.MegaMansionTycoo
 	end)
 end
 
-coroutine.wrap(AODAGZB_fake_script)()
+coroutine.wrap(EHGOYII_fake_script)()
