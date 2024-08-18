@@ -172,7 +172,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function EHGOYII_fake_script() -- Fake Script: StarterGui.MegaMansionTycoon.Main.LocalScript
+local function SUUS_fake_script() -- Fake Script: StarterGui.MegaMansionTycoon.Main.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Main"]
@@ -254,9 +254,43 @@ local function EHGOYII_fake_script() -- Fake Script: StarterGui.MegaMansionTycoo
 		Debounce = false
 	end
 	
+	local Dragging
+	local DragInput
+	local DragStart
+	local StartPos
+	
+	local function Update(Input)
+		local delta = Input.Position - DragStart
+		script.Parent.Position = UDim2.new(StartPos.X.Scale, StartPos.X.Offset + delta.X, StartPos.Y.Scale, StartPos.Y.Offset + delta.Y)
+	end
+	
 	UIS.InputBegan:Connect(function(Input, IsTyping)
 		if IsTyping then return end
 		KeyFunction(Input.KeyCode)
+	
+		if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
+			Dragging = true
+			DragStart = Input.Position
+			StartPos = script.Parent.Position
+	
+			Input.Changed:Connect(function()
+				if Input.UserInputState == Enum.UserInputState.End then
+					Dragging = false
+				end
+			end)
+		end
+	end)
+	
+	script.Parent.InputChanged:Connect(function(Input)
+		if Input.UserInputType == Enum.UserInputType.MouseMovement or Input.UserInputType == Enum.UserInputType.Touch then
+			DragInput = Input
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(Input)
+		if Input == DragInput and Dragging then
+			Update(Input)
+		end
 	end)
 	
 	script.Parent:WaitForChild("TeleportToMailbox").MouseButton1Click:Connect(function()
@@ -276,4 +310,4 @@ local function EHGOYII_fake_script() -- Fake Script: StarterGui.MegaMansionTycoo
 	end)
 end
 
-coroutine.wrap(EHGOYII_fake_script)()
+coroutine.wrap(SUUS_fake_script)()
